@@ -1,0 +1,20 @@
+Instruções para instalação das dependências no sistema
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Apache:
+
+sudo apt-get install apache2 -y
+
+Suporte ao PHP no Apache Web Server:
+
+sudo apt-get install php libapache2-mod-php -y
+
+mysql:
+
+sudo apt-get install mysql-server mysql-client php7.0-mysq	(tava o 5, agora é o 7)
+
+Então:
+
+sudo service apache2 restart
