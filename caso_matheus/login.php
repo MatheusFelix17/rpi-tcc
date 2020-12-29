@@ -8,6 +8,11 @@ $query = "SELECT * FROM USUARIOS WHERE USUARIO = '$usuario' and
 SENHA = '$senha'";
 #md5 antes ou depois, pra seguranca na senha
 $consulta = mysqli_query($conexao, $query);
+if ($consulta == 1) {
+	echo "consultou!";
+}
+else 
+	echo "<br>aqui<br>";
 # consulta no banco e detectar se existe o user e senha se batem
 # eh esperado que haja 1 resultado soh
 
@@ -18,7 +23,7 @@ if (mysqli_num_rows($consulta) == 1) {
 	$_SESSION['login'] = true;
 	$_SESSION['usuario'] = $usuario;
 	
-	#criar uma secao pra verificar se o user ta logado ou nao,
+	#criar uma sessao pra verificar se o user ta logado ou nao,
 	#pra hora que redirecionar pra home
 	$_SESSION['login'] = true;	#que vai ser utilziado no index pra validar qual pag que ta
 	header('location:index.php');
