@@ -1,21 +1,24 @@
-<h1 style="text-align:center"> Hello There! </h1>
+<h1 style="text-align:center"> Bem-vindo! </h1>
 
-<form method="post" action="login.php">
+<title>Home</title>
 
-	<label  class="badge badge-secondary">Usuário</label>
-	<input type="text" name="usuario" placeholder="Nome do Usuário"
-	class="form-control">
-	<br><br>
-	<label  class="badge badge-secondary">Senha:</label> <!--label = nomezinho do lado do campo-->
-	<input type="password" name="senha" placeholder="Digite a senha:" class=form-control>
-	
-	<br><br>
-	
-	<input type="submit" value="Entrar" class="btn btn-success">
-	
-</form>
+<?php if (!isset($_SESSION['login'])){ ?> <!-- se tiver logado nao aparece de novo a pag de login -->
+	<form method="post" action="login.php">
 
-<br>
+		<label class="badge bg-secondary">Usuário</label><br>
+		<input type="text" name="usuario" placeholder="Nome do Usuário"
+		class="form-control">
+		<br><br>
+		<label class="badge bg-secondary">Senha:</label> <!--label = nomezinho do lado do campo-->
+		<input type="password" name="senha" placeholder="Digite a senha:" class=form-control>
+		
+		<br><br>
+		
+		<input type="submit" value="Entrar" class="btn btn-success">
+		
+	</form>
+<?php } ?> 
+
 
 <?php if (isset($_GET['erro'])) { ?>
 
