@@ -26,7 +26,7 @@ if (mysqli_num_rows($consulta) == 1) {
 	#criar uma sessao pra verificar se o user ta logado ou nao,
 	#pra hora que redirecionar pra home
 	$_SESSION['login'] = true;	#que vai ser utilziado no index pra validar qual pag que ta
-	header('location:index.php');
+	header('location:index.php?pagina=home');
 }
 else {
 	#echo 'User e/ou senha inválido!';
