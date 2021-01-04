@@ -12,13 +12,12 @@
 </head>
 
 <body>
-	<header> <!-- onde vai ficar nosso menu principal-->
+	<header> <!-- onde vai ficar o menu principal-->
 		<div class="container">
 			<a href="?pagina=home"><img src="img/home.png" title="Home" alt="Home"></a>
 			<div id="menu">
-				<a href="?pagina=cursos">Cursos</a> <!-- carregando a pag via get -->
-				<a href="?pagina=alunos">Alunos</a>
-				<a href="?pagina=matriculas">Matriculas</a>
+				<!-- carregando a pag via get -->
+				<a href="?pagina=dispositivos">Dispositivos</a>
 				<a href="?pagina=quarto_painel">Painel</a>
 				<!-- soh aparecer quando usuario tiver logado -->
 				<?php if (isset($_SESSION['login'])){ ?>

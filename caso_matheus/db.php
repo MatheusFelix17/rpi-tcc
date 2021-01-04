@@ -11,32 +11,10 @@ $conexao = mysqli_connect($servidor, $user, $senha, $db);
 else
 	echo "falha ao db!";*/
 
-#carregar os cursos
+$query = "SELECT * FROM gpio where em_uso = 0";
+$consulta_gpio = mysqli_connect($conexao, $query);
 
-$query = "SELECT * FROM cursos";
-$consulta_cursos = mysqli_query($conexao, $query);
-
-/*if ($consulta_cursos == 1) {
-	echo "consulta cursos<br>";
-}
-else
-	echo "falhou consulta<br>";*/
-
-$query = "SELECT * FROM alunos";
-$consulta_alunos = mysqli_query($conexao, $query);
-
-/*if ($consulta_alunos == 1) {
-	echo "consulta alunos<br>";
-}*/
-
-$query = "SELECT alunos.nome_aluno, cursos.nome_curso FROM
-	alunos, cursos, alunos_cursos
-	WHERE alunos_cursos.id_aluno = alunos.id_aluno 
-	and alunos_cursos.id_curso = cursos.id_curso";
-$consulta_matriculas = mysqli_query($conexao, $query);
-
-/*if ($consulta_matriculas == 1) {
-	echo "consulta matriculas<br>";
-}*/
+$query = "SELECT * FROM dispositivos";
+$consulta_dispositivos = mysqli_connect($conexao, $query);
 
 #exibir o resultado na home

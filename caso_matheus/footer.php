@@ -10,9 +10,7 @@
 	<script>
 	
 		$(document).ready( function () {
-			$('#cursos').DataTable();
-			$('#alunos').DataTable();
-			$('#matriculas').DataTable();
+			$('#dispositivos').DataTable();
 			$('#quarto_painel').DataTable();
 		} );
 	
