@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 
-print("Script de acender!")
-
 import RPi.GPIO as GPIO 
-import time 
+import sys
+
+a = int(sys.argv[1])
 
 GPIO.setmode(GPIO.BOARD) 
-GPIO.setup(12, GPIO.OUT) 
+GPIO.setup(a, GPIO.OUT) 
 
-GPIO.output(12, 0) #ligando o pino
-time.sleep(2)
-#GPIO.output(12, 0) #desligando o pino
-#time.sleep(2)
+GPIO.output(a, 0) #ligando o pino
