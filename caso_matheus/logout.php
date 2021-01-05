@@ -8,4 +8,4 @@ unset($_SESSION['usuario']);
 #redicerionar pra pag de login, que eh nossa index
 header('location:index.php');
 
-#obs: nao aparecer mais o login na home quando ta logado
+#obs: nao aparecer mais o login na home quando esta logado

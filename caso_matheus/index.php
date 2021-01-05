@@ -30,7 +30,5 @@ switch($pagina) {
 	default: include 'views/home.php'; break;
 }
 
-/*#$pagina = $_GET['pagina'];	#pegando o conteudo da pagina */
-
 # Footer - rodape
 include 'footer.php';
