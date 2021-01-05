@@ -60,24 +60,18 @@
 <?php 
 
 if (isset($_POST['turnon'])) {
-	#$a = shell_exec("sudo python3 /var/www/html/gpio/gpio05/acender.py");
-	#echo $a;
-	echo "Acendeu!";
-	#echo  '<br />The ' . $_POST['turnon'] . ' ligou<br />';
-	#shell_exec("sudo python /var/www/painel.com/public_html/scripts/acender.py");
 	$num_pino = $_POST['turnon'];
+	$executar = "sudo python /var/www/painel.com/public_html/scripts/acender.py " . $num_pino;
+	shell_exec($executar);	
 	$query = "UPDATE dispositivos SET estado = '1' WHERE dispositivos.pino = $num_pino";
 	mysqli_query($conexao, $query);
 	header('location:index.php?pagina=quarto_painel');
 }
  
 else if (isset($_POST['turnoff'])) {
-	#$a = shell_exec("sudo python3 /var/www/html/gpio/gpio05/acender.py");
-	#echo $a;
-	echo "Apagou!";
-	#echo  '<br />O pino ' . $_POST['turnoff'] . ' foi desligado <br />';
-	#shell_exec();
-	$num_pino = $_POST['turnoff'];
+	$num_pino = $_POST['turnoff'];	
+	$executar = "sudo python /var/www/painel.com/public_html/scripts/apagar.py " . $num_pino;
+	shell_exec($executar);
 	$query = "UPDATE dispositivos SET estado = '0' WHERE dispositivos.pino = $num_pino";
 	mysqli_query($conexao, $query);
 	header('location:index.php?pagina=quarto_painel');
