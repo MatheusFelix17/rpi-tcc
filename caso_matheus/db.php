@@ -1,9 +1,9 @@
 <?php
 
 $servidor = "localhost";
-$senha = "matt1706";
+$senha = "";  #senha cadastrada no banco de dados
 $db = "domotics";
-$user = "matheus";
+$user = "username"; #nome de usuario cadastrado no banco de dados
 
 $conexao = mysqli_connect($servidor, $user, $senha, $db);
 
