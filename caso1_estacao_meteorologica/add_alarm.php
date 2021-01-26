@@ -118,7 +118,7 @@ table {
 <div class = content_block>
 
 <!-- Titulo da página -->
-<h1>Esta&ccedil;&atilde;o Meteorologica:</h1>
+<h1>Estação Meteorologica:</h1>
 
 <button class=my_button>CRIAR ALARME</button>
 <button class=my_button2>TABELA</button>
@@ -219,124 +219,46 @@ while ($row = $result->fetch_row()) {
 ?>
 
 <h3>Escolha os valores para o alarme: </h3>
-<label for="cars">Temperatura: </label><br>
 
+<label for="temp">Temperatura °C (entre 0 e 50):</label>
+<br>
+<input type="number" id="temp" value="20" name="temp" min="0" max="50" step=".5">
+<br>
+<br>
 
-<select name="cars" id="cars">
-  <option value="25">5</option>
-  <option value="saab">6</option>
-  <option value="mercedes">7</option>
-  <option value="audi">8</option>
-  <option value="volvo">9</option>
-  <option value="saab">10</option>
-  <option value="mercedes">11</option>
-  <option value="audi">12</option>
-  <option value="volvo">13</option>
-  <option value="saab">14</option>
-  <option value="mercedes">15</option>
-  <option value="audi">16</option>
-  <option value="volvo">17</option>
-  <option value="saab">18</option>
-  <option value="mercedes">19</option>
-  <option value="audi">20</option>
-  <option value="volvo">21</option>
-  <option value="saab">22</option>
-  <option value="mercedes">23</option>
-  <option value="audi">24</option>
-  <option value="volvo">25</option>
-  <option value="saab">26</option>
-  <option value="mercedes">27</option>
-  <option value="audi">28</option>
-  <option value="saab">29</option>
-  <option value="mercedes">30</option>
-  <option value="audi">31</option>
-  <option value="saab">32</option>
-  <option value="mercedes">33</option>
-  <option value="audi">34</option>
-  <option value="saab">35</option>
-  <option value="mercedes">36</option>
-  <option value="audi">37</option>
-  <option value="audi">38</option>
-  <option value="saab">39</option>
-  <option value="mercedes">40</option>
-  <option value="audi">41</option>
-</select>
+<label for="velocidade">Velocidade Vento: (km/h)</label><br>
+<input type="number" id="velocidade" value="5" name="velocidade" min="0" max="100">
+<br>
+<br>
+
+<label for="direcao">Direção Vento: </label><br>
+<select name="direcao" id="direcao">
+  <option value="norte">Norte</option>
+  <option value="sul">Sul</option>
+  <option value="leste">Leste</option>
+  <option value="oeste">Oeste</option>
+  <option value="sudeste">Sudeste</option>
+  <option value="sudoeste">Sudoeste</option>
+  <option value="nordeste">Nordeste</option>
+  <option value="noroeste">Noroeste</option>
 </select>
 <br>
 <br>
-<label for="cars">Velocidade Vento: (km/h)</label><br>
 
-
-<select name="cars" id="cars">
-  <option value="a">2</option>
-  <option value="a">6</option>
-  <option value="a">10</option>
-  <option value="a">15</option>
-  <option value="a">20</option>
-  <option value="a">30</option>
-  <option value="a">35</option>
-  <option value="a">40</option>
-  <option value="a">45</option>
-  <option value="a">50</option>
-  <option value="a">60</option>
-  <option value="a">65</option>
-  <option value="a">70</option>
-  <option value="a">80</option>
-  <option value="a">90</option>
-  <option value="a">100</option>
-
-</select>
-
+<label for="umidade">Umidade: (%)</label><br>
+<label for="umidade">Umidade do ar: (km/h)</label><br>
+<input type="number" id="umidade" value="60" name="umidade" min="0" max="100">
 <br>
 <br>
-<label for="cars">Direção Vento: </label><br>
 
 
-<select name="x" id="x">
-  <option value="x">Norte</option>
-  <option value="x">Sul</option>
-  <option value="x">Leste</option>
-  <option value="x">Oeste</option>
-  <option value="x">Sudeste</option>
-  <option value="x">Sudoeste</option>
-  <option value="x">Nordeste</option>
-  <option value="x">Noroeste</option>
-</select>
-<br>
-
-<br>
-<label for="cars">Umidade: (%)</label><br>
-
-
-<select name="cars" id="cars">
-  <option value="a">20</option>
-  <option value="a">30</option>
-  <option value="a">35</option>
-  <option value="a">40</option>
-  <option value="a">45</option>
-  <option value="a">50</option>
-  <option value="a">60</option>
-  <option value="a">65</option>
-  <option value="a">70</option>
-  <option value="a">75</option>
-  <option value="a">80</option>
-  <option value="a">85</option>
-  <option value="a">90</option>
-  <option value="a">95</option>
-  <option value="a">98</option>
-</select>
-
-<br>
-<br>
-<label for="cars">Pressão: (mmHg)</label><br>
-
-
-<select name="cars" id="cars">
-  <option value="70">680</option>
-  <option value="70">700</option>
-  <option value="70">720</option>
-  <option value="70">740</option>
-  <option value="70">760</option>
+<label for="pressao">Pressão: (mmHg)</label><br>
+<select name="pressao" id="pressao">
+  <option value="680">680</option>
+  <option value="700">700</option>
+  <option value="720">720</option>
+  <option value="740">740</option>
+  <option value="760">760</option>
 </select>
 <br>
 <br>
