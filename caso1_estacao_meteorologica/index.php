@@ -147,6 +147,7 @@ while ($row = $result->fetch_row()) {
 ?>
 
 
+ <!-- https://www.chartjs.org/docs/latest/developers/updates.html -->
 
 
 <script>
@@ -236,3 +237,6 @@ while ($row = $result->fetch_row()) {
 </body>
 
 </html>
+
+
+

@@ -221,34 +221,56 @@ while ($row = $result->fetch_row()) {
 <h3>Escolha os valores para o alarme: </h3>
 
 
-<form action="insert_alarm.php" method="post">
-  <label>Temperatura</label><br>
-  <input type="text" name="temp"><br><br>
 
-  <label>Velocidade do Vento</label><br>
-  <input type="text" name="velocidade"><br><br>
-  
-  <label>Direção do Vento</label><br>
-  <input type="text" name="direcao"><br><br>
+<label for="temp">Temperatura °C (entre 0 e 50):</label>
+<br>
+<input type="number" id="temp" value="20" name="temp" min="0" max="50" step=".5">
+<br>
+<br>
 
-  <label>Umidade Relativa</label><br>
-  <input type="text" name="umidade"><br><br>
+<label for="velocidade">Velocidade Vento: (km/h)</label><br>
+<input type="number" id="velocidade" value="5" name="velocidade" min="0" max="100">
+<br>
+<br>
 
-  <label>Pressão Atmosférica</label><br>
-  <input type="text" name="pressao"><br><br>
+<label for="direcao">Direção Vento: </label><br>
+<select name="direcao" id="direcao">
+  <option value="norte">Norte</option>
+  <option value="sul">Sul</option>
+  <option value="leste">Leste</option>
+  <option value="oeste">Oeste</option>
+  <option value="sudeste">Sudeste</option>
+  <option value="sudoeste">Sudoeste</option>
+  <option value="nordeste">Nordeste</option>
+  <option value="noroeste">Noroeste</option>
+</select>
+<br>
+<br>
 
-  <label>Telefone</label><br>
-  <input type="tel" id="telefone" name="telefone"><br><br>
-  
-
-  <button class=my_button_submit onclick="toggle_div()" type="submit" name="submit">Criar alarme!</button>
-</form>
-
+<label for="umidade">Umidade: (%)</label><br>
+<label for="umidade">Umidade do ar: (km/h)</label><br>
+<input type="number" id="umidade" value="60" name="umidade" min="0" max="100">
+<br>
+<br>
 
 
+<label for="pressao">Pressão: (mmHg)</label><br>
+<select name="pressao" id="pressao">
+  <option value="680">680</option>
+  <option value="700">700</option>
+  <option value="720">720</option>
+  <option value="740">740</option>
+  <option value="760">760</option>
+</select>
+<br>
+<br>
 
 
-
+<label for="phone">Insira seu Telefone: (e.g: +55 11 98100 5900) </label><br>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+<br>
+<br>
+<button class=my_button_submit onclick="toggle_div()">Criar alarme!</button>
 
 
 <div id="alert_created_div" class="alert_created_div">
